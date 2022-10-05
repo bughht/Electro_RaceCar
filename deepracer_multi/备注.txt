@@ -1,0 +1,2 @@
+先对raceworld进行编译（catkin_make）
+然后将pkg放入src文件夹中

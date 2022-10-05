@@ -1,0 +1,8 @@
+prefix=/home/bughht/deepracer/demo_muticarfollow/deepracer_workspace/install
+
+Name: raceworld
+Description: Description of raceworld
+Version: 1.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy tf message_runtime

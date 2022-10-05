@@ -1,0 +1,2 @@
+raceworld
+-DCATKIN_DEVEL_PREFIX=/home/bughht/deepracer/demo_qr_line/deepracer_demo/devel -DCMAKE_INSTALL_PREFIX=/home/bughht/deepracer/demo_qr_line/deepracer_demo/install -G Unix Makefiles

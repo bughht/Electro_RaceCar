@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- 设置launch文件的参数 -->
+	<arg name="paused" default="false" />
+	<arg name="use_sim_time" default="true" />
+	<arg name="gui" default="true" />
+	<arg name="headless" default="false" />
+	<arg name="debug" default="false" />
+	<!--模型车的起点放置位置-->
+	<arg name="x_pos" default="-0.65" />
+	<arg name="y_pos" default="-0.83" />
+	<arg name="z_pos" default="0.013" />
+	<arg name="R_pos" default="0" />
+	<arg name="P_pos" default="0" />
+	<arg name="Y_pos" default="0" />
+	<!--运行gazebo仿真环境-->
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<arg name="debug" value="$(arg debug)" />
+		<arg name="gui" value="$(arg gui)" />
+		<arg name="paused" value="$(arg paused)" />
+		<arg name="use_sim_time" value="$(arg use_sim_time)" />
+		<arg name="headless" value="$(arg headless)" />
+		<arg name="world_name" value="$(find raceworld)/worlds/raceworld1.world" />
+		<!-- .world文件的地址-->
+	</include>
+	<node name="track_urdf" pkg="gazebo_ros" type="spawn_model" output="screen" args="-file $(find raceworld)/urdf/raceworld.urdf -urdf -model track -x 0 -y 0 -z 0" />
+    <group ns="deepracer1">
+		<param name="robot_description" command="$(find xacro)/xacro '$(find raceworld)/urdf/deepracer.xacro' bodyframe:=deepracer1 ns:=deepracer1" />
+		<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+		<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen">
+			<param name="publish_frequency" type="double" value="30.0" />
+			<param name="tf_prefix" value="deepracer1" />
+		</node>
+
+		<node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model deepracer1 -param robot_description -y -1.00 -x -0.5 -z 0.10 -Y 0.00" />
+		<!-- 从yaml文件加载联合控制器的参数 -->
+		<rosparam file="$(find raceworld)/config/ctrl.yaml" command="load" />
+
+		<!-- 加载控制器 spawner -->
+
+		<node name="controller_manager" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="left_rear_wheel_velocity_controller       right_rear_wheel_velocity_controller
+						left_front_wheel_velocity_controller      right_front_wheel_velocity_controller
+						left_steering_hinge_position_controller   right_steering_hinge_position_controller
+						joint_state_controller" />
+
+
+		<node pkg="raceworld" type="servo_commands.py" name="servo_commands" output="screen">
+			<param name="robot_name" value="deepracer1" />
+		</node>
+
+
+	</group>
+
+	 
+	<group ns="deepracer2">
+		<param name="robot_description" command="$(find xacro)/xacro '$(find raceworld)/urdf/deepracer.xacro' bodyframe:=deepracer2  ns:=deepracer2" />
+		<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"></node>
+		<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen">
+			<param name="publish_frequency" type="double" value="30.0" />
+			<param name="tf_prefix" value="deepracer2" />
+		</node>
+		<node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model deepracer2 -param robot_description -y -1.00 -x -1.00 -z 0.10 -Y 0.00" />
+		<!-- 从yaml文件加载联合控制器的参数 -->
+		<rosparam file="$(find raceworld)/config/ctrl.yaml" command="load" />
+
+		<!-- 加载控制器 spawner -->
+
+		<node name="controller_manager" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="left_rear_wheel_velocity_controller       right_rear_wheel_velocity_controller
+						left_front_wheel_velocity_controller      right_front_wheel_velocity_controller
+						left_steering_hinge_position_controller   right_steering_hinge_position_controller
+						joint_state_controller" />
+
+
+		<node pkg="raceworld" type="servo_commands.py" name="servo_commands" output="screen">
+			<param name="robot_name" value="deepracer2" />
+		</node>
+	</group>
+
+</launch>
