@@ -67,14 +67,14 @@ set(raceworld_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(raceworld_SOURCE_PREFIX /home/bughht/deepracer/demo_qr_line/deepracer_demo/src/raceworld)
-  set(raceworld_DEVEL_PREFIX /home/bughht/deepracer/demo_qr_line/deepracer_demo/devel)
+  set(raceworld_SOURCE_PREFIX /home/bughht/deepracer/Electro_RaceCar/deepracer_single/src/raceworld)
+  set(raceworld_DEVEL_PREFIX /home/bughht/deepracer/Electro_RaceCar/deepracer_single/devel)
   set(raceworld_INSTALL_PREFIX "")
   set(raceworld_PREFIX ${raceworld_DEVEL_PREFIX})
 else()
   set(raceworld_SOURCE_PREFIX "")
   set(raceworld_DEVEL_PREFIX "")
-  set(raceworld_INSTALL_PREFIX /home/bughht/deepracer/demo_qr_line/deepracer_demo/install)
+  set(raceworld_INSTALL_PREFIX /home/bughht/deepracer/Electro_RaceCar/deepracer_single/install)
   set(raceworld_PREFIX ${raceworld_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/bughht/deepracer/demo_qr_line/deepracer_demo/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/bughht/deepracer/Electro_RaceCar/deepracer_single/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

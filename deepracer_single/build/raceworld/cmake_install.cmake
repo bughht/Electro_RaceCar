@@ -1,8 +1,8 @@
-# Install script for directory: /home/bughht/deepracer/demo_qr_line/deepracer_demo/src/raceworld
+# Install script for directory: /home/bughht/deepracer/Electro_RaceCar/deepracer_single/src/raceworld
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/bughht/deepracer/demo_qr_line/deepracer_demo/install")
+  set(CMAKE_INSTALL_PREFIX "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,57 +38,57 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/bughht/deepracer/demo_qr_line/deepracer_demo/build/raceworld/catkin_generated/installspace/raceworld.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/build/raceworld/catkin_generated/installspace/raceworld.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/raceworld/cmake" TYPE FILE FILES
-    "/home/bughht/deepracer/demo_qr_line/deepracer_demo/build/raceworld/catkin_generated/installspace/raceworldConfig.cmake"
-    "/home/bughht/deepracer/demo_qr_line/deepracer_demo/build/raceworld/catkin_generated/installspace/raceworldConfig-version.cmake"
+    "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/build/raceworld/catkin_generated/installspace/raceworldConfig.cmake"
+    "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/build/raceworld/catkin_generated/installspace/raceworldConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/raceworld" TYPE FILE FILES "/home/bughht/deepracer/demo_qr_line/deepracer_demo/src/raceworld/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/raceworld" TYPE FILE FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/src/raceworld/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/demo_qr_line/deepracer_demo/build/raceworld/catkin_generated/installspace/get_camera.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/build/raceworld/catkin_generated/installspace/get_camera.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/demo_qr_line/deepracer_demo/build/raceworld/catkin_generated/installspace/key_op.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/build/raceworld/catkin_generated/installspace/key_op.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/demo_qr_line/deepracer_demo/build/raceworld/catkin_generated/installspace/servo_commands1.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/build/raceworld/catkin_generated/installspace/servo_commands1.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/demo_qr_line/deepracer_demo/build/raceworld/catkin_generated/installspace/follow.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/build/raceworld/catkin_generated/installspace/follow.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/demo_qr_line/deepracer_demo/build/raceworld/catkin_generated/installspace/control_servo.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/build/raceworld/catkin_generated/installspace/control_servo.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/demo_qr_line/deepracer_demo/build/raceworld/catkin_generated/installspace/tag_detect.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/build/raceworld/catkin_generated/installspace/tag_detect.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/raceworld/config" TYPE DIRECTORY FILES "/home/bughht/deepracer/demo_qr_line/deepracer_demo/src/raceworld/config/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/raceworld/config" TYPE DIRECTORY FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/src/raceworld/config/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/raceworld/launch" TYPE DIRECTORY FILES "/home/bughht/deepracer/demo_qr_line/deepracer_demo/src/raceworld/launch/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/raceworld/launch" TYPE DIRECTORY FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/src/raceworld/launch/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/raceworld/meshes" TYPE DIRECTORY FILES "/home/bughht/deepracer/demo_qr_line/deepracer_demo/src/raceworld/meshes/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/raceworld/meshes" TYPE DIRECTORY FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/src/raceworld/meshes/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/raceworld/urdf" TYPE DIRECTORY FILES "/home/bughht/deepracer/demo_qr_line/deepracer_demo/src/raceworld/urdf/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/raceworld/urdf" TYPE DIRECTORY FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/src/raceworld/urdf/")
 endif()
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bughht/deepracer/demo_qr_line/deepracer_demo/src
+CMAKE_SOURCE_DIR = /home/bughht/deepracer/Electro_RaceCar/deepracer_single/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bughht/deepracer/demo_qr_line/deepracer_demo/build
+CMAKE_BINARY_DIR = /home/bughht/deepracer/Electro_RaceCar/deepracer_single/build
 
 # Utility rule file for run_tests.
 
@@ -67,6 +67,6 @@ CMakeFiles/run_tests.dir/clean:
 .PHONY : CMakeFiles/run_tests.dir/clean
 
 CMakeFiles/run_tests.dir/depend:
-	cd /home/bughht/deepracer/demo_qr_line/deepracer_demo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bughht/deepracer/demo_qr_line/deepracer_demo/src /home/bughht/deepracer/demo_qr_line/deepracer_demo/src /home/bughht/deepracer/demo_qr_line/deepracer_demo/build /home/bughht/deepracer/demo_qr_line/deepracer_demo/build /home/bughht/deepracer/demo_qr_line/deepracer_demo/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bughht/deepracer/Electro_RaceCar/deepracer_single/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bughht/deepracer/Electro_RaceCar/deepracer_single/src /home/bughht/deepracer/Electro_RaceCar/deepracer_single/src /home/bughht/deepracer/Electro_RaceCar/deepracer_single/build /home/bughht/deepracer/Electro_RaceCar/deepracer_single/build /home/bughht/deepracer/Electro_RaceCar/deepracer_single/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/run_tests.dir/depend
 

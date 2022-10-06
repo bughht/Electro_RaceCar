@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/bughht/deepracer/demo_qr_line/deepracer_demo/devel:$CMAKE_PREFIX_PATH"
-export PWD='/home/bughht/deepracer/demo_qr_line/deepracer_demo/build'
-export ROSLISP_PACKAGE_DIRECTORIES='/home/bughht/deepracer/demo_qr_line/deepracer_demo/devel/share/common-lisp'
-export ROS_PACKAGE_PATH="/home/bughht/deepracer/demo_qr_line/deepracer_demo/src:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/bughht/deepracer/Electro_RaceCar/deepracer_single/devel:$CMAKE_PREFIX_PATH"
+export PWD='/home/bughht/deepracer/Electro_RaceCar/deepracer_single/build'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/bughht/deepracer/Electro_RaceCar/deepracer_single/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/bughht/deepracer/Electro_RaceCar/deepracer_single/src:$ROS_PACKAGE_PATH"

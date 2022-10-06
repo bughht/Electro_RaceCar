@@ -1,4 +1,4 @@
-prefix=/home/bughht/deepracer/demo_qr_line/deepracer_demo/devel
+prefix=/home/bughht/deepracer/Electro_RaceCar/deepracer_single/devel
 
 Name: raceworld
 Description: Description of raceworld
