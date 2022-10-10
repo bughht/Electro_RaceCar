@@ -16,7 +16,7 @@ isLeft = None
 
 def adjustOrientation():
     global isLeft
-    msg = AckermannDriveStamped()
+    msg = AckermannDriveStamped();
     msg.header.stamp = rospy.Time.now()
     msg.header.frame_id = "base_link"
     msg.drive.speed = 0.15
@@ -71,10 +71,10 @@ def lane(img):
     try:
         
 
-        img = cv2.circle(img, (src_points[0][0],src_points[0][1]), 3, (0, 0, 255), -1)
-        img = cv2.circle(img, (src_points[1][0],src_points[1][1]), 3, (0, 0, 255), -1)
-        img = cv2.circle(img, (src_points[2][0],src_points[2][1]), 3, (0, 255, 0), -1)
-        img = cv2.circle(img, (src_points[3][0],src_points[3][1]), 3, (0, 255, 0), -1)
+        img = cv2.circle(img, (int(src_points[0][0]),int(src_points[0][1])), 3, (0, 0, 255), -1)
+        img = cv2.circle(img, (int(src_points[1][0]),int(src_points[1][1])), 3, (0, 0, 255), -1)
+        img = cv2.circle(img, (int(src_points[2][0]),int(src_points[2][1])), 3, (0, 255, 0), -1)
+        img = cv2.circle(img, (int(src_points[3][0]),int(src_points[3][1])), 3, (0, 255, 0), -1)
         cv2.imshow('origin', img)
         #cv2.waitKey(0)
         
@@ -233,12 +233,12 @@ def lane(img):
             st = -1
         sm = 0.1
         
-        msg = AckermannDriveStamped()
+        msg = AckermannDriveStamped();
         msg.header.stamp = rospy.Time.now()
         msg.header.frame_id = "base_link"
 
-        msg.drive.speed = 0.7
-        msg.drive.steering_angle = steerAngle * 0.95
+        msg.drive.speed = 1.0
+        msg.drive.steering_angle = steerAngle * 0.5;
         pub.publish(msg)
         print("Is lane left of the car?" + str(isLeft))
     except KeyboardInterrupt:

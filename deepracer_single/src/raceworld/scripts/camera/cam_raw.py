@@ -1,6 +1,6 @@
-#! /usr/bin/env python
+#!/usr/bin/python3
 import rospy, cv2, cv_bridge
-from sensor_msgs.msg import Image
+from sensor_msgs.msg import Image,CompressedImage
 
 
 class Camera:
@@ -14,20 +14,17 @@ class Camera:
     def image_callback_left(self,msg):
         bridge = cv_bridge.CvBridge()
         self.frame_left = bridge.imgmsg_to_cv2(msg, 'bgr8')
-        # cv2.imshow('window_left', frame)
-        # cv2.waitKey(1)
-        # pass
+        print(self.frame_left.dtype)
 
     def image_callback_right(self,msg):
         bridge = cv_bridge.CvBridge()
         self.frame_right = bridge.imgmsg_to_cv2(msg, 'bgr8')
         
-        
-        # pass
     def plot(self):
         while True:
             if self.frame_right is not None:
                 cv2.imshow('window_right', self.frame_right)
+                print(self.frame_right.shape)
             if self.frame_left is not None:
                 cv2.imshow('window_left', self.frame_left)
             cv2.waitKey(1)

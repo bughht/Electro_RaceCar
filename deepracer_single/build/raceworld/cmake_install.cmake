@@ -53,11 +53,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/build/raceworld/catkin_generated/installspace/get_camera.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/build/raceworld/catkin_generated/installspace/cam_raw.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/build/raceworld/catkin_generated/installspace/key_op.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/build/raceworld/catkin_generated/installspace/Key_Cam.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -66,6 +70,14 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/build/raceworld/catkin_generated/installspace/follow.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/build/raceworld/catkin_generated/installspace/lane_sim.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raceworld" TYPE PROGRAM FILES "/home/bughht/deepracer/Electro_RaceCar/deepracer_single/build/raceworld/catkin_generated/installspace/lane.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
