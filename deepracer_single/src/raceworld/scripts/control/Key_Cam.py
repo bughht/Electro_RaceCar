@@ -26,7 +26,7 @@ class Key_Cam:
 
     def openvino_init(self): 
         self.ie=IECore()
-        self.net = self.ie.read_network(model="/home/bughht/deepracer/Electro_RaceCar/deepracer_single/src/raceworld/models/ssdlite_FP32/ssdlite_mobilenet_v2.xml",weights='/home/bughht/deepracer/Electro_RaceCar/deepracer_single/src/raceworld/models/ssdlite_FP32/ssdlite_mobilenet_v2.bin')
+        self.net = self.ie.read_network(model="/home/bughht/deepracer/Electro_RaceCar/models/ssdlite_FP32/ssdlite_mobilenet_v2.xml",weights='/home/bughht/deepracer/Electro_RaceCar/models/ssdlite_FP32/ssdlite_mobilenet_v2.bin')
         self.exec_net = self.ie.load_network(self.net, "CPU")
 
         self.output_layer_ir = next(iter(self.exec_net.outputs))
